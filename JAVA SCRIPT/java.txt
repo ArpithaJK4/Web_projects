@@ -1,0 +1,11 @@
+to create repository->git init
+check status- git status
+to stage files- git add
+to see diffrence-git diff
+to undo changes- git restore .
+to remove  from staging area->git rm -cached "filename"
+to configure email&name
+git config --globalnuser.email "email"
+git config  co nfig --global user.name "name"
+tosave to local repository
+git commit  -m "added"

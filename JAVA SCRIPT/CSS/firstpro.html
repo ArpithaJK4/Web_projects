@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Java Script
+    </h1>
+    <nav>
+        <ul>
+            <li id="item1" class="item2">Item1</li>
+            <li id="item1" class="item2">Item2</li>
+            <li id="item1" class="item2">Item3</li>
+            <li id="item1" class="item2">Item4</li>
+            <li id="item1" class="item2">Item5</li>
+            <li id="item1" class="item2">Item6</li>
+        </ul>
+    </nav>
+</body>
+<script>
+
+
+    // var c1=document.getElementById("item1");
+   
+    // c1.style.background="red"
+    var e1=document.getElementsByClassName("item2");
+    // console.log(e1);
+    // console.log(e1.length);
+    // console.log((Array.isArray(e1)));
+    
+    var pureArray=Array.from(e1);
+    // console.log(pureArray);
+    pureArray.forEach((ele,index)=>{
+        if(index%2==0){
+            ele.style.background="aqua"
+        }else{
+            ele.style.background="red"
+        }
+    });
+</script>
+</html>

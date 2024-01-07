@@ -1,0 +1,22 @@
+class Armstrong_number{
+
+public static void main(String[]args){
+
+int no=15;
+int copy=no;
+int count=1;
+int sum=0;
+
+while(no!=0){
+no=no/10;
+count++
+
+
+}
+while(no!=0){
+
+int rem=no%10;
+sum=sum+Math.pow(rem,count)
+
+no=no/10;
+}}}

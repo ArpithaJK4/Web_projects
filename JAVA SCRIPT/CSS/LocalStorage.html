@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        Name:<input type="text" id="name1"><br>
+        id:<input type="text" id="id"><br>
+        pass:<input type="text" id="pass"><br>
+        <button id="set">set</button>
+        <button id="get">get</button>
+        <button id="remove">remove</button>
+        <button id="clear">clear</button>
+    </form>
+    <script>
+
+    var name1=document.querySelector("#name1")
+    var id=document.querySelector("#id")
+    var pass=document.querySelector("#pass")
+    var set=document.querySelector("#set")
+    var get=document.querySelector("#get")
+    var remove=document.querySelector("#remove")
+    var clear=document.querySelector("#clear")
+
+      set.addEventListener("click",(r)=>
+     
+        {
+            r.preventDefault()
+            var nVal=name1.value;
+            var iVal=id.value;
+            var pVal=pass.value;
+           localStorage.setItem("name1",nVal);
+            localStoarge.setItem("id",iVal);
+            localStoarge.setItem("pass",pVal);
+        })
+
+        get.addEventListener("click",()=>
+        {
+            var nVal=name1.value;
+            var iVal=id.value;
+            var pVal=pass.value;
+            console.log(localStoarge.getItem(nVal));
+            console.log(localStoarge.getItem(iVal));
+            console.log(localStoarge.getItem(pVal));
+        })
+
+        remove.addEventListener("click",()=>
+        {
+            var nVal=name1.value;
+            var iVal=id.value;
+            var pVal=pass.value;
+            localStoarge.removeItem(nVal);
+            localStoarge.removeItem(iVal);
+            localStoarge.removeItem(pVal);
+        })
+
+        clear.addEventListener("click",()=>
+        {
+            localStorage.clear()
+        })
+
+ 
+
+
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+// var num=12;
+// var num2=13;
+// var num3="14";
+// console.log(num3+num2+num);
+// console.log(typeof num3+num2+num);
+
+// console.log( "12"-13+14*14);
+
+// function add(arr ,mul){
+//     let brr=[];
+//     for(let i=0;i<arr.length;i++){
+//         brr.push(mul(arr[i]))
+//         console.log(mul);
+//     }
+// }
+// add([17,15,19,31],(x)=>x*10);
+// var str=`"hi" hello good Morning`;
+// console.log(str.slice(7,13));
+
+// console.log(str.substring(7,13));
+// var str=`"hi" hello good Morning`;
+// var arr=[]
+// for(let i=0;i<str.length;i++){
+//     // arr[i]=str.charAt(i);
+//     arr.push(str[i])
+    
+// }
+// console.log(arr);
+
+
+// function demo(x,d)
+// {
+//     function test(y){
+//         function foo(z){
+//             console.log(z);
+//             console.log(y);
+//             console.log(x);
+//             console.log(d(z));
+//         }
+//       return foo;
+//     }
+//     return test;
+// }
+// demo(5,div)(6)(5)
+// function div(a)
+// {
+//     return 10*a;
+// }
+
+
+// var arr=[12,13,14,15]
+// console.log(arr);  console.log(arr.toSpliced(2,0,35, 36));
+// console.log(arr);
+// console.log(arr.toReversed());
+// arr.splice(2,0,35,36);
+// console.log(arr);
+// console.log(arr.toSpliced(2,0,35, 36)); 
+// arr.reverse();
+// console.log(arr.toReversed());
+// arr.toSorted();
+// console.log(arr);
+
+
+
+// happy number
+// function happy_number(num) 
+// {
+//     var m, n ;
+//     var c = [] ;
+ 
+//     while(num != 1 && c[num] !== true) 
+//     {
+//         c[num] = true ;
+//         m = 0 ;
+//         while (num > 0) {
+//             n = num % 10 ;
+//             m += n * n ;
+//             num = (num  - n) / 10 ;
+//         }
+//         num = m ;
+//     }
+//     return (num == 1) ;
+// }
+ 
+// var cnt = 5;
+// var num = 1;
+// var f5 = ''; 
+// while(cnt-- > 0) 
+// {
+//     while(!happy_number(num))
+//         num++ ;
+// f5 = f5+(num + ", ") ;
+
+//     num++ ;
+// }
+// console.log('First 5 happy numbers are : '+f5);
+// var num=11;
+// var sum;
+// while(num>9){
+//     sum=0;
+//     while (num!=0) {
+//         var d=num%10;
+//         sum=sum+d*d;
+//         num=num/10;
+        
+//     }
+//     num=sum;
+// }
+// if(num==1 ||num==7){
+//     console.log("happy number");
+
+
+// }else{
+//     console.log("not a happy number");
+// }
+
+// fizzbuzz
+
+// function fiz() {
+//     var no=14;
+//     if(no%3==0&&no%1==0){
+//         console.log("fizzbuzz");
+//     }else
+//         if( no%3==0){
+//             console.log("fizfizz");
+//         }
+//         else if(no%7==0){
+//             console.log("BuzBuzz");
+//         }else{
+//             console.log("invalid no");
+//         }
+//     }
+//     fiz();
+
+
+// oddeven
+
+// function oddeven( start ,end ){
+//     for(let i=start;i<=end;i++){
+//       if(i%2==0){
+//         console.log(i + "even");
+//       }
+//       else if(i%2!=0){
+//         console.log( i+ " odd");
+//       }
+//     }
+// }
+//     oddeven(1,10);
+
+// 
+
+// prime
+// function prime(no){
+
+
+// var re=true;
+
+// for(let i=2;i<no;i++){
+//     if(no%2==0){
+//         re=false;
+//         break;
+//     }
+// }
+// if(re==true){
+//     console.log("prime number");
+// }else{
+//     console.log( "not a prime number");
+// }
+// }
+// prime(7);
+
+
+// function fact(no){
+//     if(no==1){
+//         return no;
+//     }else{
+//         return no*fact(no-1);
+//     }
+// }
+// console.log(fact(5));
+
+// var no=123.001;
+// console.log(parseInt(no)+1);
+// var no=123.001;
+// console.log(parseInt(no));
+// var no=123.001;
+// function isFloat(n) {
+// //   return Number(n) === n && n % 1 !== 0;
+// if(n%1>0.5){
+//     console.log(parseInt(no)+1);
+// }else{
+//     console.log(parseInt(no));
+// }
+// }
+
+// // Example usage
+// isFloat(3.14) // true
+// console.log(isFloat(5));   
+
+// function isFlatValue(value) {
+//   return value != parseInt(value, 10);
+// }
+
+// function printNumber(value) {
+//   if (isFlatValue(value)) {
+//     var intValue = parseInt(value, 10);
+//     var decimalValue = value - intValue;
+  
+
+//     if (decimalValue > 0.5) {
+//       console.log(intValue + 1);
+//     } else {
+//       console.log(intValue);
+//     }
+//   } else {
+//     console.log("Not a flat value.");
+//   }
+// }
+
+
+// printNumber(3.7); 
+// printNumber(5.2); 
+// printNumber(7.0); 
+// printNumber(8.4); 
+
+// function 
+// fun(x) {
+//   console.log("hi");
+//   console.log(x);
+// }
+// console.log(fun);
+
+// function 
+// fun(x) {
+//   console.log("hi");
+// return x;
+// }
+// console.log(fun(5))
+
+// let str=function(x) {
+//   console.log("hi");
+//   return 7+x;
+// }
+// console.log(str(5));
+// console.log(str(7));
+
+// let str=function(x) {
+//   console.log("hi");
+//   return 7+x;
+// }
+// console.log(str(5));
+// console.log( typeof str);
+
+
+// first class function
+
+// let str=function str1(x) {
+//   console.log("hi");
+//   return 7+x;
+// }
+// console.log(str(5));
+
+
+// // function expression
+
+// let str2=function (x) {
+//   console.log("hi");
+//   return 7+x;
+// }
+// console.log(str2(5));
+// console.log(str2);
+// console.log(typeof str2);
+
+
+var str3=(function test(x){
+  console.log("hello "+x);
+  return 30;
+  console.log("234"+x);
+})
+(6);
+
+</script>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+ 
+
+
+
+  
+</body>
+<script>
+    // prime numberf
+    // function prime(n ,flag) {
+    //     for (let i = 2; i < n; i++) {
+    //       if(n%i==0){
+    //         flag=false;
+    //         break;
+
+    //       }
+    //       if(flag==true){
+    //         console.log("prime");
+    //       }else{
+    //         console.log("not a prime number");
+    //       }
+            
+    //     }
+
+
+        
+    // }
+    // prime(7, true);
+
+
+    // factorial
+
+    // function fact(n){
+    //   var f=1;
+    //     for (let i = n; i >=1; i--) {
+    //         f=f*i;
+            
+    //     }
+    //     console.log(f);
+    // }
+    // fact(5);
+
+// Strong number
+
+// function perfect(no) {
+//     var sum=0;
+//     for (let i = 1; i < no; i++) {
+       
+//     if(no%i==0){
+//       sum=sum+i;
+//     }
+        
+//     }
+//    if(sum==no){
+//     console.log("Strong number");
+//    }
+//     else{
+//         console.log("not a Strong number");
+//     }
+// }
+// strong(6
+
+
+// prime using inbuit function
+// function test_prime(num) {
+//   if (num <= 1) {
+//     return false;
+//   }
+//   for (let i = 2; i <= Math.sqrt(num); i++) {
+//     if (num % i === 0) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+// console.log(test_prime(37));
+// console.log(test_prime(36));
+
+// // factorial
+// function factorial(n){
+//     if(n < 0){
+//         return "number has to be positive."
+//     }
+    
+//     //base case
+//     if(n == 0 || n == 1){
+//         return 1;
+//     //recursive case
+//     }else{
+//         return n * factorial(n-1);
+//     }
+// }
+// let n = 5;
+// answer = factorial(n)
+// console.log("Factorial of " + n + " : " + answer);
+
+
+// // prime
+// function isPrime(num ) {
+   
+//    const div = 2;
+//     if(num <= div ) return false; 
+    
+  
+       
+//     if(num % 2 === 0) return false  
+    
+//     return true; 
+   
+   
+
+//     return isPrime(num)
+//   }
+
+//   console.log(isPrime(1)); //-> false
+//   console.log(isPrime(2)); //-> true
+//   console.log(isPrime(3)); //-> true
+//   console.log(isPrime(4)); //-> false
+
+
+// Strong number
+
+// const no=145;
+// var copy=no;
+// var sum=0;
+// function Strong(no){
+// while (no!=0) {
+//     var rem=no%10;
+//     var fact=1;
+//     for (let i = rem; i >=1; i--) {
+//     fact=fact*i;
+        
+//     }  sum=sum+fact;
+//     no=parseInt(no/10);  
+// }
+// if(copy==sum){
+//     console.log("Strong number");
+    
+// }else{
+//     console.log("not a Strong number");
+// }
+
+// }
+// Strong(145);
+
+
+// // diserim
+// const num=175;
+// const  diserim=num=>{
+//     const res=String(num).split("").reduce((acc,val,ind)=>{
+//         acc=acc+Math.pow (+val,ind+1);
+//         return acc;
+//     },0);
+//     return res===num;
+// };
+// console.log(diserim(num));
+// console.log(diserim(32));
+// console.log(diserim(4334));
+   
+
+// pending
+//     var num=153;
+//     var ans=num.toString().length;
+//     var base=3;
+//     var row=3;
+//     var ans=1;
+//     for(let i=1;i<=pow;i++){
+//         ans=base*ans;
+//     }
+// function calculate(b,p){
+//     var base=b;
+//     var row=p;
+//     var ans=1;
+//     for(let i=1;i<=pow;i++){
+//         ans=base*ans;
+//         console.log(ans);
+//     }
+//     calculate(3,2);
+//     calculate(5,6);
+// }
+
+// Happy number
+
+// var sum;
+// function happy(num){
+// while(num>9){
+//     sum=0;
+//     while (num!=0) {
+//         var d=num%10;
+//         sum=sum+d*d;
+//         num=parseInt(num/10);
+        
+//     }
+//     num=sum;
+// }
+// if(num==1 ||num==7){
+//     console.log("happy number");
+
+
+// }else{
+//     console.log("not a happy number");
+// }
+// }
+// happy(14);
+// console.log(Math.ceil(12.00));
+
+
+
+// // date onbject methods
+// var s1=new Date();
+// var d1=new Date();
+// d1.setDate(4);
+// d1.setFullYear(2001);
+// d1.setMonth(7);
+// console.log(s1.getFullYear()- d1.getFullYear());
+// console.log(d1.getMonth()-s1.getMonth());
+// console.log(d1.getDate());
+
+// console.log(d1.getDate());
+// console.log(d1.getDay());
+// console.log(d1.getFullYear());
+// console.log(d1.getHours());
+// console.log(d1.getMonth());
+// console.log((d1.getSeconds()));
+// console.log(d1.getMilliseconds());
+// console.log(d1.getMinutes());
+// console.log(typeof d1);
+
+
+        
+// var num=13.036;
+// var ans;
+// var diff=num-parseInt(num);
+// if(diff>0){
+//     ans=parseInt(num)+1;
+// }
+// console.log(num);
+ var num=123.3;
+
+ var ans;
+ var diff=num/parseInt(num);
+ if(diff!=1){
+    ans=parseInt(num)+1;
+ }
+
+</script>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>form</title>
+</head>
+<body>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="password">Password:</label>
+        <input type="text" id="password" name="password"><br><br>
+        <h1 id="h1" style="color: red;"></h1>
+
+        <input type="button" value="Submit" onclick="validate()">
+    </form>
+
+    <script>
+        function validate(){
+            validateName();
+            // 
+        }
+        function validateName()
+        {
+            var name = document.getElementById("name").value;
+            var error= document.getElementById("h1");
+
+            if((name[0]>='a' &&name[0]<='z')||((name[0]>='A'&&name[0]<'Z')))
+            {
+               return validatePassword(); 
+            }
+            else{
+                error.textContent ="Name should start with Alphabat";
+            }
+            
+
+        }
+
+
+        function validatePassword() {
+            var password = document.getElementById("password").value;
+            var error= document.getElementById("h1");
+
+            // error.textContent = "";
+            
+            if (password === ""&&password.length>=8) {
+                error.textContent ="You should give Minimum 8 character";
+                return;
+            }
+
+            var hasUpperCase = 0;
+            var hasLowerCase = 0;
+            var hasDigit = 0;
+            var hasSpecialChar = 0;
+
+
+          
+            for (var i = 0; i < password.length; i++) {
+                var char = password.charAt(i);
+
+                if ((char>='A')&&(char<='Z')) {
+                    hasUpperCase ++;
+                } else if ((char>='a')&&(char<='z')) {
+                    hasLowerCase ++;
+                } else if ((char>='0')&&(char<='9')) {
+                    hasDigit ++;
+                } else if (!(char>=0&&char<=9)&&!((char>='a'&&char<='z'))&&!(char>='A'&&char<='Z')) {
+                    hasSpecialChar++;
+                }
+            }
+       
+            if (password.length>=8){
+            if ((hasUpperCase>=1)&& (hasLowerCase >=1)&& (hasDigit>=1) && (hasSpecialChar>=1)) {
+                alert("Password is valid: " + password);
+            } else if(hasUpperCase<1)
+{
+    error.textContent ="Enter atleast one UpperCase";
+}
+else if(hasLowerCase<1)
+{
+    error.textContent = "Enter atleast one lowercase";
+}
+else if(hasDigit<1)
+{
+    error.textContent ="Enter atleast one digit";
+}
+else if(hasSpecialChar<1)
+{
+    error.textContent ="Enter atleast one Specialchar";
+}
+            }
+            else{
+                error.textContent ="Enter minimum 8 character";
+            }
+        }
+    </script>
+</body>
+</html>
+
