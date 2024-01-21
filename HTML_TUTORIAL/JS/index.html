@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Index.css">
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+        <h2 id="color-code">#fff</h2>
+        <button id="btn">Click me!</button>
+        </div>
+    </div>
+    <script>
+const getcolor = () => {
+    const randomcolor = Math.floor(Math.random() * 16777215);
+    const randomcode = "#" + randomcolor.toString(16);
+    document.body.style.backgroundColor = randomcode; // Corrected 'Document' to 'document' and 'backgroundcolor' to 'backgroundColor'
+    console.log(randomcolor, randomcode);
+    document.getElementById("color-code").innerText=randomcode ;
+}
+
+document.getElementById("btn").addEventListener("click", getcolor);
+getcolor();
+
+    </script>
+</body>
+</html>
