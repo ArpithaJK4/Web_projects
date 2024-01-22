@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var a="global veriable";
+    function gp(){
+        var Gproperty="100ac";
+        var ajji="paramma";
+        console.log(ajji);
+        console.log(Gproperty);
+        function p(){
+            var Pproperty="50ac";
+           console.log(Pproperty);
+           function child(){
+            var Cproperty="25ac";
+            console.log(Cproperty);
+             console.log(Pproperty);
+               console.log(Gproperty);
+           }
+           return child;
+        }
+        return p;
+    }gp()()();
+</script>
+</html> 
